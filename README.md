@@ -6,7 +6,7 @@ supports for saml2aws and aws-vault.**
 ## Usage
 
 ```txt
-# awsenv 0.1.0 (https://github.com/mrevjd/awsenv-fish.git)
+# awsenv 0.1.1 (https://github.com/mrevjd/awsenv-fish.git)
 
 A simple multi-provider AWS profile manager for fish-shell with backed-in
 supports for saml2aws and aws-vault. The aws-cli is required for this software
@@ -64,3 +64,6 @@ mkdir -p ~/.config/fish/functions/ ~/.config/fish/completions/
 ln -s ~/.config/fish/awsenv/functions/*.fish ~/.config/fish/functions/
 ln -s ~/.config/fish/awsenv/completions/awsenv.fish ~/.config/fish/completions/
 ```
+
+### History
+# Original code and concept by https://github.com/0rax/awsenv.fish
