@@ -1,10 +1,15 @@
 #!/usr/bin/env fish
 
 function __awsenv_list --argument-names provider
-
-    set -l saml (sed -nE 's|^\[([a-zA-Z0-9_-]+)\]$|\1|p' $HOME/.saml2aws)
-    set -l vault (aws-vault list | tr -s ' ' | cut -d' ' -f1,2 | tail -n+3 | grep -v -- '-$' | cut -d' ' -f1)
-    set -l cli (sed -nE 's|^\[([a-zA-Z0-9_-]+)\]$|\1|p' $HOME/.aws/credentials)
+    if test -e $HOME/.saml2aws
+        set -l saml (sed -nE 's|^\[([a-zA-Z0-9_-]+)\]$|\1|p' $HOME/.saml2aws)
+    end
+    if type -q aws-vault
+        set -l vault (aws-vault list | tr -s ' ' | cut -d' ' -f1,2 | tail -n+3 | grep -v -- '-$' | cut -d' ' -f1)
+    end
+    if test -e $HOME/.saml2aws
+        set -l cli (sed -nE 's|^\[([a-zA-Z0-9_-]+)\]$|\1|p' $HOME/.aws/credentials)
+    end
     set -l cli_ignore (echo $saml $vault | tr ' ' '|')
 
     switch "$provider"
