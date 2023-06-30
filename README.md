@@ -1,6 +1,6 @@
 # awsenv-fish
 
-**A simple multi-provider AWS profile manager for fish-shell with backed-in
+**A simple multi-provider AWS profile manager for fish-shell with baked-in
 supports for saml2aws and aws-vault.**
 
 ## Usage
