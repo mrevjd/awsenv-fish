@@ -66,4 +66,5 @@ ln -s ~/.config/fish/awsenv/completions/awsenv.fish ~/.config/fish/completions/
 ```
 
 ### History
-# Original code and concept by https://github.com/0rax/awsenv.fish
+Original code and concept by https://github.com/0rax/awsenv.fish
+
